@@ -1,4 +1,3 @@
-
 # Selenium Web Automation Project(with Java)
 
  - Author: Sana Anwar Farooqui
