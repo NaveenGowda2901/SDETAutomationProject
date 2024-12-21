@@ -15,3 +15,7 @@
  - Continous Integration to Jenkins and execute tests via Jenkins
 
 ![WebAutomationFlow](https://github.com/user-attachments/assets/6438745c-9018-4c54-988e-3d4c574ac91a)
+
+![ConsoleOutput](https://github.com/user-attachments/assets/9823d53b-8e78-4e02-b590-b72fe4712d49)
+
+![ExtentReport](https://github.com/user-attachments/assets/02eaa02c-66e8-49a5-b077-96b9843b834b)
