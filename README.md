@@ -14,5 +14,4 @@
  - setUp method to run the test cases localy and remote via Selenium Grid and Docker(docker-compose.yml)
  - Continous Integration to Jenkins and execute tests via Jenkins
 
-# Framework Design
-![WebAutomationFlow](https://github.com/user-attachments/assets/02ae3893-a034-4b60-94dd-3602e480e69b)
+![WebAutomationFlow](https://github.com/user-attachments/assets/6438745c-9018-4c54-988e-3d4c574ac91a)
