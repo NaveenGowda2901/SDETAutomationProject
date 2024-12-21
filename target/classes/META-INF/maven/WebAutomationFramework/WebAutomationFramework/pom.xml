@@ -15,7 +15,7 @@
 					<version>3.5.0</version>
 					<configuration>
 						<suiteXmlFiles>
-							<suiteXmlFile>master.xml</suiteXmlFile>
+							<suiteXmlFile>mastere2e.xml</suiteXmlFile>
 						</suiteXmlFiles>
 
 					</configuration>

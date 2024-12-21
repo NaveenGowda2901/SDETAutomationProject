@@ -9,13 +9,13 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="testCases.TC_Search_002">
+      <class name="testCases.TC_Delete_003">
         <methods>
+          <include name="testNavigatingBackAccountDeletion"/>
           <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="testSearchProductviaSearchBtn"/>
         </methods>
-      </class> <!-- testCases.TC_Search_002 -->
+      </class> <!-- testCases.TC_Delete_003 -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

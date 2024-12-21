@@ -15,6 +15,7 @@
 			<class name="testCases.TC_Register_007" />
 			<class name="testCases.TC_Login_001" />
 			<class name="testCases.TC_Delete_001" />
+			<class name="testCases.TC_Delete_003" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
