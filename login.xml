@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+		<listener class-name="utilities.ExtentReportManager" />
+<!-- 		<listener class-name="utilities.RetryListener" />  -->
+	</listeners>
+	<test name="Test">
+		<classes>
+			<class name="testCases.TC_Login_001" />
+			<class name="testCases.TC_Login_002" />
+			<class name="testCases.TC_Login_003" />
+			<class name="testCases.TC_Login_004" />
+			<class name="testCases.TC_Login_005" />
+			<class name="testCases.TC_Login_006" />
+			<class name="testCases.TC_Login_007" />
+			<class name="testCases.TC_Login_008" />
+			<class name="testCases.TC_Login_009" />
+			<class name="testCases.TC_Login_010" />
+			<class name="testCases.TC_Login_011" />
+			<class name="testCases.TC_Login_012" />
+			<class name="testCases.TC_Login_013" />	
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

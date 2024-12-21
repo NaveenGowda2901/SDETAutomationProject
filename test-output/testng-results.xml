@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-12-20T19:20:39 IST" name="Suite" finished-at="2024-12-20T19:21:27 IST" duration-ms="48148">
+    <groups>
+    </groups>
+    <test started-at="2024-12-20T19:20:39 IST" name="Test" finished-at="2024-12-20T19:21:27 IST" duration-ms="48148">
+      <class name="testCases.TC_Search_002">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:testCases.TC_Search_002@2cc44ad]" started-at="2024-12-20T19:20:39 IST" name="setUp" finished-at="2024-12-20T19:21:06 IST" duration-ms="26658" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[windows]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testSearchProductviaSearchBtn()[pri:0, instance:testCases.TC_Search_002@2cc44ad]" started-at="2024-12-20T19:21:06 IST" name="testSearchProductviaSearchBtn" finished-at="2024-12-20T19:21:27 IST" duration-ms="20940" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSearchProductviaSearchBtn -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC_Search_002@2cc44ad]" started-at="2024-12-20T19:21:27 IST" name="tearDown" finished-at="2024-12-20T19:21:27 IST" duration-ms="282" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases.TC_Search_002 -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

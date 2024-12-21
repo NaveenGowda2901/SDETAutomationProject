@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+		<listener class-name="utilities.ExtentReportManager" />
+<!-- 		<listener class-name="utilities.RetryListener" />  -->
+	</listeners>
+	<test name="Test">
+		<classes>
+			<class name="testCases.TC_Register_001" />
+			<class name="testCases.TC_Register_002" />
+			<class name="testCases.TC_Register_003" />
+			<class name="testCases.TC_Register_004" />
+			<class name="testCases.TC_Register_005" />
+			<class name="testCases.TC_Register_006" />
+			<class name="testCases.TC_Register_007" />
+			<class name="testCases.TC_Register_008" />
+			<class name="testCases.TC_Register_009" />
+			<class name="testCases.TC_Register_010" />
+			<class name="testCases.TC_Register_011" />
+			<class name="testCases.TC_Register_012" />
+			<class name="testCases.TC_Register_013" />
+			<class name="testCases.TC_Register_014" />
+			<class name="testCases.TC_Register_015" />
+			<class name="testCases.TC_Register_016" />
+			<class name="testCases.TC_Register_017" />
+			<class name="testCases.TC_Register_018" />
+			<class name="testCases.TC_Register_019" />
+			<class name="testCases.TC_Register_020" />
+			<class name="testCases.TC_Register_021" />
+			
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
