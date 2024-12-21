@@ -15,4 +15,4 @@
  - Continous Integration to Jenkins and execute tests via Jenkins
 
 # Framework Design
-![Framework](https://github.com/user-attachments/assets/204132b9-c179-4aad-b254-fdce2b6d051c)
+![WebAutomationFlow](https://github.com/user-attachments/assets/02ae3893-a034-4b60-94dd-3602e480e69b)
