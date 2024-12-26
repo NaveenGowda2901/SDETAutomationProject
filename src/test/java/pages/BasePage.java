@@ -28,7 +28,7 @@ public class BasePage {
 	}
 	
 	public WebDriverWait waitHelper() {
-		return wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+		return wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	}
 
 	public Select select(WebElement element) {

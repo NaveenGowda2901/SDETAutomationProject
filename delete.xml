@@ -4,7 +4,7 @@
 
 	<listeners>
 		<listener class-name="utilities.ExtentReportManager" />
-		<listener class-name="utilities.RetryListener" />
+	<!-- 	<listener class-name="utilities.RetryListener" />  -->
 	</listeners>
 
 	<parameter name="browser" value="chrome" />
@@ -15,6 +15,7 @@
 			<class name="testCases.TC_Delete_001" />
 			<class name="testCases.TC_Delete_002" />
 			<class name="testCases.TC_Delete_003" />
+			
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

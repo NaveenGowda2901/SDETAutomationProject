@@ -15,7 +15,7 @@ public class TC_Delete_003 extends BaseClass{
 	SignupLoginPage signuppage;
 	
 	@Test()
-	public void testNavigatingBackAccountDeletion() {
+	public void testNavigatingBackAccountDeletion() throws InterruptedException {
 		homepage = new HomePage(driver);
 		deletepage = new DeleteAccountPage(driver);
 		signuppage = new SignupLoginPage(driver);
@@ -48,6 +48,7 @@ public class TC_Delete_003 extends BaseClass{
 		Assert.assertEquals(homepage.validateSignupLoginLink(), true);
 		
 		homepage.navigateBack();
+		Thread.sleep(1000);
 		homepage.navigateBack();
 		
 		Assert.assertEquals(homepage.validateSignupLoginLink(), true);

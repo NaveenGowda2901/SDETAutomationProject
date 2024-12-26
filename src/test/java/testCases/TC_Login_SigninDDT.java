@@ -13,15 +13,19 @@ public class TC_Login_SigninDDT extends BaseClass{
 
 	@Test(dataProvider = "login", dataProviderClass = utilities.DataSupplier.class)
 	public void testSigninWithValidCredentials(String email, String password, String status) {
+		logger.info("*******Starting Test Case TC_Login_SigninDDT**********");
+
 		signuppage = new SignupLoginPage(driver);
 		homepage = new HomePage(driver);
-		
+
 		homepage.clickSinupLogin();
-		
+
 		signuppage.siginInEmail(email);
 		signuppage.siginInPassword(password);
 		signuppage.clickSignIn();
-		
+
+		logger.info("********Providing customer details*********");
+
 		if(status.equals("invalidemail")) {
 			if(signuppage.validateIncorrectSiginPasswordOrEmail()==true)
 				Assert.assertTrue(true);
@@ -32,7 +36,7 @@ public class TC_Login_SigninDDT extends BaseClass{
 				Assert.fail();
 			}
 		}
-		
+
 		if(status.equals("invalidpassword")) {
 			if(signuppage.validateIncorrectSiginPasswordOrEmail()==true)
 				Assert.assertTrue(true);
@@ -43,7 +47,7 @@ public class TC_Login_SigninDDT extends BaseClass{
 				Assert.fail();
 			}
 		}
-		
+
 		if(status.equals("invalidemailformat")) {
 			if(signuppage.validateSigninInvalidEmailFormat()==true)
 				Assert.assertTrue(true);
@@ -54,7 +58,7 @@ public class TC_Login_SigninDDT extends BaseClass{
 				Assert.fail();
 			}
 		}
-		
+
 		if(status.equals("valid")) {
 			if(homepage.validateLogoutLinkDisplay()==true) {
 				Assert.assertTrue(true);
@@ -63,7 +67,7 @@ public class TC_Login_SigninDDT extends BaseClass{
 			else if(homepage.validateLogoutLinkDisplay()==false)
 				Assert.fail();
 		}
-		
+
 		if(status.equals("missingemail")) {
 			if(signuppage.validateMissingSigninEmailField()==true)
 				Assert.assertTrue(true);
@@ -74,7 +78,7 @@ public class TC_Login_SigninDDT extends BaseClass{
 				Assert.fail();
 			}
 		}
-		
+
 		if(status.equals("missingpassword")) {
 			if(signuppage.validateMissingSigninPasswordField()==true)
 				Assert.assertTrue(true);
@@ -85,17 +89,20 @@ public class TC_Login_SigninDDT extends BaseClass{
 				Assert.fail();
 			}
 		}
-		
+
 		if(status.equals("missingemailandpassword")) {
 			if(signuppage.validateMissingSigninEmailField()==true)
 				Assert.assertTrue(true);
-			else if(signuppage.validateMissingSigninEmailField()==false)
+			else if(signuppage.validateMissingSigninEmailField()==false) {
+				logger.error("****Test Failed*****");
+				logger.debug("****Debug Logs******");
 				Assert.fail();
+			}
 			else if(homepage.validateLogoutLinkDisplay()==true) {
 				homepage.clickLogOut();
 				Assert.fail();
 			}
 		}
-		
+
 	}
 }

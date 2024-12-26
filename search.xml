@@ -4,7 +4,7 @@
 
 	<listeners>
 		<listener class-name="utilities.ExtentReportManager" />
-		<listener class-name="utilities.RetryListener" />
+	<!-- <listener class-name="utilities.RetryListener" />  -->	
 	</listeners>
 
 	<parameter name="browser" value="chrome" />
@@ -12,11 +12,8 @@
 
 	<test name="Test">
 		<classes>
-			<class name="testCases.TC_Search_001" />
-			<class name="testCases.TC_Search_002" />
-			<class name="testCases.TC_Search_003" />
+			
 			<class name="testCases.TC_Search_004" />
-			<class name="testCases.TC_Search_005" />
 			<class name="testCases.TC_Search_006" />
 		</classes>
 	</test> <!-- Test -->

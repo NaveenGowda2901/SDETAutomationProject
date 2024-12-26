@@ -5,7 +5,6 @@
   <parameter name="browser" value="chrome"/>
   <listeners>
     <listener class-name="utilities.ExtentReportManager"/>
-    <listener class-name="utilities.RetryListener"/>
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>

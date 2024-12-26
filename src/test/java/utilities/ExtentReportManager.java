@@ -24,10 +24,13 @@ public class ExtentReportManager implements ITestListener, IRetryAnalyzer{
 	
 	int retryCount=0;
 	int maxRetryCount=3;
+
 	public boolean retry(ITestResult result) {
+		//This method comes from IRetryAnalyzer Interface to retry executing the failed cases maximum up to 3 times
+	
 		if(retryCount<maxRetryCount) {
 			retryCount++;
-			System.out.println("Retrying the test "+ result.getName()+" for "+retryCount+" time");
+			System.out.println("Retrying the Test "+result.getName()+" for the "+retryCount+ " time");
 			return true;
 		}
 		return false;
@@ -38,7 +41,7 @@ public class ExtentReportManager implements ITestListener, IRetryAnalyzer{
 	public ExtentTest test;//creating test case entries in the report and update status of the test report
 
 	String repName;
-	
+
 	public void onStart(ITestContext testContext){
 
 		/*	SimpleDateFormat df = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss");
@@ -51,8 +54,8 @@ public class ExtentReportManager implements ITestListener, IRetryAnalyzer{
 
 		sparkReporter = new ExtentSparkReporter(".\\reports\\"+repName);  //speciy location o the report
 
-		sparkReporter.config().setDocumentTitle("Open Cart Automation Project"); //Title of the Report
-		sparkReporter.config().setReportName("Open Cart Functional Testing"); //Name of the Report
+		sparkReporter.config().setDocumentTitle("Automation Exercise Project"); //Title of the Report
+		sparkReporter.config().setReportName("Automation Exercise Functional Testing"); //Name of the Report
 		sparkReporter.config().setTheme(Theme.DARK); //Theme of the report
 
 
@@ -98,7 +101,7 @@ public class ExtentReportManager implements ITestListener, IRetryAnalyzer{
 			String imgPath = new BaseClass().captureScreen(result.getName());
 			test.addScreenCaptureFromPath(imgPath);
 		}
-		catch(Exception e)
+		catch(IOException e)
 		{
 			e.printStackTrace();
 		}
@@ -154,5 +157,5 @@ public class ExtentReportManager implements ITestListener, IRetryAnalyzer{
 		 */
 		
 	}
-
+	
 }
