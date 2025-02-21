@@ -13,20 +13,19 @@ public class TC_Register_DDFSignupDDT extends BaseClass {
 	SignupLoginPage signuppage;
 
 	@Test(dataProvider = "signup", dataProviderClass = utilities.DataSupplier.class)
-	public void testSignUpDDT(String name, String email, String status, String title, String password, String day, String month,
-							  String year, String fname, String lname, String company, String address1, String address2,
-							  String country, String state, String city, String zip, String mobile) {
-		
+	public void testSignUpDDT(String status, String title, String password, String day, String month,
+			String year, String fname, String lname, String company, String address1, String address2,
+			String country, String state, String city, String zip, String mobile) {
+
 		signuppage = new SignupLoginPage(driver);
 		homepage = new HomePage(driver);
 
 		homepage.clickSinupLogin();
 
-		signuppage.signUpName(name);
-		signuppage.signUpEmail(email);
-		signuppage.clickSignUp();
-
 		if(status.equals("noname")) {
+			signuppage.signUpEmail(fakerData().internet().emailAddress());
+			signuppage.clickSignUp();
+			
 			if(signuppage.validateMissingSignUpNameField()==true)
 				Assert.assertTrue(true);
 			else if(signuppage.validateMissingSignUpNameField()==false)
@@ -38,6 +37,9 @@ public class TC_Register_DDFSignupDDT extends BaseClass {
 		}
 
 		if(status.equals("noemail")) {
+			signuppage.signUpName(fakerData().name().firstName());
+			signuppage.clickSignUp();
+			
 			if(signuppage.validateMissingSignUpEmailField()==true)
 				Assert.assertTrue(true);
 			else if(signuppage.validateMissingSignUpEmailField()==false)
@@ -49,6 +51,7 @@ public class TC_Register_DDFSignupDDT extends BaseClass {
 		}
 
 		if(status.equals("nonameandemail")) {
+			signuppage.clickSignUp();
 			if(signuppage.validateMissingSignUpNameField()==true)
 				Assert.assertTrue(true);
 			else if(signuppage.validateMissingSignUpNameField()==false)
@@ -60,6 +63,10 @@ public class TC_Register_DDFSignupDDT extends BaseClass {
 		}
 
 		if(status.equals("validallfields")) {
+			signuppage.signUpName(fakerData().name().firstName());
+			signuppage.signUpEmail(fakerData().internet().emailAddress());
+			signuppage.clickSignUp();
+			
 			if(signuppage.validateSignUP()==true) {
 
 				signuppage.selectGender(title);
@@ -92,6 +99,9 @@ public class TC_Register_DDFSignupDDT extends BaseClass {
 		}
 
 		if(status.equals("invalidemailformat")) {
+			signuppage.signUpName(fakerData().name().firstName());
+			signuppage.signUpEmail(fakerData().name().firstName());
+			signuppage.clickSignUp();
 			if(signuppage.validateSignupInvalidEmailFormat()==true)
 				Assert.assertTrue(true);
 			else if(signuppage.validateSignupInvalidEmailFormat()==false)
@@ -103,6 +113,9 @@ public class TC_Register_DDFSignupDDT extends BaseClass {
 		}
 
 		if(status.equals("existinguser")) {
+			signuppage.signUpName(prop.getProperty("validname"));
+			signuppage.signUpEmail(prop.getProperty("validemail"));
+			signuppage.clickSignUp();
 			if(signuppage.validateSignUpWithExistingUser()==true)
 				Assert.assertTrue(true);
 			else if(signuppage.validateSignUpWithExistingUser()==false)
@@ -114,6 +127,10 @@ public class TC_Register_DDFSignupDDT extends BaseClass {
 		}		
 
 		if(status.equals("validmandatoryfields")) {
+			signuppage.signUpName(fakerData().name().firstName());
+			signuppage.signUpEmail(fakerData().internet().emailAddress());
+			signuppage.clickSignUp();
+			
 			if(signuppage.validateSignUP()==true) {
 				signuppage.setAccountPassword(password);
 				signuppage.setAddressFirstName(fname);
@@ -137,6 +154,10 @@ public class TC_Register_DDFSignupDDT extends BaseClass {
 			}
 
 			if(status.equals("validwithoutpassword")) {
+				signuppage.signUpName(fakerData().name().firstName());
+				signuppage.signUpEmail(fakerData().internet().emailAddress());
+				signuppage.clickSignUp();
+				
 				if(signuppage.validateSignUP()==true) {
 					signuppage.setAddressFirstName(fname);
 					signuppage.setAddressLastName(lname);
@@ -164,6 +185,10 @@ public class TC_Register_DDFSignupDDT extends BaseClass {
 		}
 
 		if(status.equals("validwithoutfname")) {
+			signuppage.signUpName(fakerData().name().firstName());
+			signuppage.signUpEmail(fakerData().internet().emailAddress());
+			signuppage.clickSignUp();
+			
 			if(signuppage.validateSignUP()==true) {
 				signuppage.setAccountPassword(password);
 				signuppage.setAddressLastName(lname);
@@ -189,6 +214,10 @@ public class TC_Register_DDFSignupDDT extends BaseClass {
 		}
 
 		if(status.equals("validwithoutlname")) {
+			signuppage.signUpName(fakerData().name().firstName());
+			signuppage.signUpEmail(fakerData().internet().emailAddress());
+			signuppage.clickSignUp();
+			
 			if(signuppage.validateSignUP()==true) {
 				signuppage.setAccountPassword(password);
 				signuppage.setAddressFirstName(fname);
@@ -213,6 +242,10 @@ public class TC_Register_DDFSignupDDT extends BaseClass {
 
 
 		if(status.equals("validwithoutaddress1")) {
+			signuppage.signUpName(fakerData().name().firstName());
+			signuppage.signUpEmail(fakerData().internet().emailAddress());
+			signuppage.clickSignUp();
+			
 			if(signuppage.validateSignUP()==true) {
 				signuppage.setAccountPassword(password);
 				signuppage.setAddressFirstName(fname);
@@ -238,6 +271,10 @@ public class TC_Register_DDFSignupDDT extends BaseClass {
 		}
 
 		if(status.equals("validwithoutstate")) {
+			signuppage.signUpName(fakerData().name().firstName());
+			signuppage.signUpEmail(fakerData().internet().emailAddress());
+			signuppage.clickSignUp();
+			
 			if(signuppage.validateSignUP()==true) {
 				signuppage.setAccountPassword(password);
 				signuppage.setAddressFirstName(fname);
@@ -264,6 +301,10 @@ public class TC_Register_DDFSignupDDT extends BaseClass {
 
 
 		if(status.equals("validwithoutcity")) {
+			signuppage.signUpName(fakerData().name().firstName());
+			signuppage.signUpEmail(fakerData().internet().emailAddress());
+			signuppage.clickSignUp();
+			
 			if(signuppage.validateSignUP()==true) {
 				signuppage.setAccountPassword(password);
 				signuppage.setAddressFirstName(fname);
@@ -290,6 +331,10 @@ public class TC_Register_DDFSignupDDT extends BaseClass {
 
 
 		if(status.equals("validwithoutzip")) {
+			signuppage.signUpName(fakerData().name().firstName());
+			signuppage.signUpEmail(fakerData().internet().emailAddress());
+			signuppage.clickSignUp();
+			
 			if(signuppage.validateSignUP()==true) {
 				signuppage.setAccountPassword(password);
 				signuppage.setAddressFirstName(fname);
@@ -316,6 +361,10 @@ public class TC_Register_DDFSignupDDT extends BaseClass {
 
 
 		if(status.equals("validempty")) {
+			signuppage.signUpName(fakerData().name().firstName());
+			signuppage.signUpEmail(fakerData().internet().emailAddress());
+			signuppage.clickSignUp();
+			
 			if(signuppage.validateSignUP()==true) {
 				signuppage.clickCreateAccount();
 
@@ -333,6 +382,10 @@ public class TC_Register_DDFSignupDDT extends BaseClass {
 		}
 
 		if(status.equals("validwithoutphone")) {
+			signuppage.signUpName(fakerData().name().firstName());
+			signuppage.signUpEmail(fakerData().internet().emailAddress());
+			signuppage.clickSignUp();
+			
 			if(signuppage.validateSignUP()==true) {
 				signuppage.setAccountPassword(password);
 				signuppage.setAddressFirstName(fname);

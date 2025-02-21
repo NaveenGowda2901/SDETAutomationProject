@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCases.TC_Delete_003">
+      <class name="testCases.TC_Register_DDFSignupDDT">
         <methods>
           <include name="tearDown"/>
-          <include name="testNavigatingBackAccountDeletion"/>
+          <include name="testSignUpDDT"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- testCases.TC_Delete_003 -->
+      </class> <!-- testCases.TC_Register_DDFSignupDDT -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

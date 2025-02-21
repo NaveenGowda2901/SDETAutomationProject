@@ -62,7 +62,7 @@ public class ExtentReportManager implements ITestListener, IRetryAnalyzer{
 		extent = new ExtentReports();
 		extent.attachReporter(sparkReporter);
 
-		extent.setSystemInfo("Application", "Open Cart");
+		extent.setSystemInfo("Application", "Automation Exercise");
 		extent.setSystemInfo("Computer Name", "localhost");
 		extent.setSystemInfo("Environment", "QA");
 		extent.setSystemInfo("Module", "Admin");

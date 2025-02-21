@@ -5,16 +5,24 @@
   <parameter name="browser" value="chrome"/>
   <listeners>
     <listener class-name="utilities.ExtentReportManager"/>
+    <listener class-name="utilities.RetryListener"/>
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="testCases.TC_Delete_003">
+      <class name="testCases.TC_Register_DDFSignupDDT">
         <methods>
-          <include name="testNavigatingBackAccountDeletion"/>
           <include name="tearDown"/>
+          <include name="testSignUpDDT" invocation-numbers="3 6"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- testCases.TC_Delete_003 -->
+      </class> <!-- testCases.TC_Register_DDFSignupDDT -->
+      <class name="testCases.TC_Login_SigninDDT">
+        <methods>
+          <include name="tearDown"/>
+          <include name="testSigninWithValidCredentials" invocation-numbers="4 5 6"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- testCases.TC_Login_SigninDDT -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
