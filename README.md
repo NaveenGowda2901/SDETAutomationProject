@@ -1,6 +1,6 @@
 # Selenium Web Automation Project(with Java)
 
-### Author: Sana Anwar Farooqui
+### Author: Naveen L
    
 ![WebAutomationFlow](https://github.com/user-attachments/assets/6438745c-9018-4c54-988e-3d4c574ac91a)
 
